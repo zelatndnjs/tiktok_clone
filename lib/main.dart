@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const TikTokClone());
+  runApp(const TikTokApp());
 }
 
-class TikTokClone extends StatelessWidget {
-  const TikTokClone({super.key});
+class TikTokApp extends StatelessWidget {
+  const TikTokApp({super.key});
 
   @override
   Widget build(BuildContext context) {
