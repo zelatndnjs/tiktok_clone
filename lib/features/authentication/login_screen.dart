@@ -5,6 +5,10 @@ import 'package:tiktok_clone/constants/sizes.dart';
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
+  void onSignUpTap(BuildContext context) {
+    Navigator.of(context).pop();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,14 +50,17 @@ class LoginScreen extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Already have an account?"),
+              Text("Don't have an account?"),
               Gaps.h5,
-              Text(
-                'Log in',
-                style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: Sizes.size16,
-                  color: Theme.of(context).primaryColor,
+              GestureDetector(
+                onTap: () => onSignUpTap(context),
+                child: Text(
+                  'Sign up',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: Sizes.size16,
+                    color: Theme.of(context).primaryColor,
+                  ),
                 ),
               ),
             ],
